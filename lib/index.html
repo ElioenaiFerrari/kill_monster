@@ -34,21 +34,27 @@
         </div>
       </div>
       <div v-if="hasResult" class="panel result">
-        <div v-if="monsterLife==0" class="win">Você ganhou! :)</div>
-        <div v-else class="lose">Você perdeu! :(</div>
+        <div v-if="monsterLife==0" class="win">You win! :)</div>
+        <div v-else class="lose">You lose! :(</div>
       </div>
       <div class="panel controls">
         <template v-if="isRunning">
-          <button class="control attack">Attack</button>
-          <button class="control special-attack">Special Attack</button>
-          <button class="control heal">Heal</button>
-          <button class="control quit">Quit</button>
+          <button @click="attack(false)" class="control attack">Attack</button>
+          <button @click="attack(true)" class="control special-attack">
+            Special Attack
+          </button>
+          <button @click="heal" class="control heal">Heal</button>
+          <button @click="isRunning = false" class="control quit">Quit</button>
         </template>
-        <button @click="isRunning=true" v-else class="control start">
+        <button @click="start" v-else class="control start">
           Start
         </button>
       </div>
-      <div class="panel logs"></div>
+      <div v-if="logs.length" class="panel logs">
+        <ul>
+          <li v-for="log in logs" class="log" :class="log.cls">{{log.text}}</li>
+        </ul>
+      </div>
     </div>
   </body>
   <script src="scripts.js"></script>

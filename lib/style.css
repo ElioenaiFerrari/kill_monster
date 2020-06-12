@@ -42,7 +42,7 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
-  background: green;
+  background: lightgreen;
 }
 
 .life-bar .life.danger {
@@ -100,5 +100,34 @@ html {
 
 .attack {
   background: red;
+  color: white;
+}
+
+.logs ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs ul li {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  padding: 3px 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.player {
+  background: linear-gradient(90deg, #7159c1, pink);
+  color: white;
+}
+
+.monster {
+  background: linear-gradient(90deg, rgb(101, 101, 243), lightblue);
   color: white;
 }
