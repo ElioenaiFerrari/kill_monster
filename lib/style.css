@@ -63,3 +63,42 @@ html {
 .result .lose {
   color: red;
 }
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.start {
+  background: #7159c1;
+  color: white;
+}
+
+.quit {
+  background: black;
+  color: white;
+}
+
+.heal {
+  background: lightgreen;
+  color: white;
+}
+
+.special-attack {
+  background: rgb(194, 194, 27);
+  color: white;
+}
+
+.attack {
+  background: red;
+  color: white;
+}
